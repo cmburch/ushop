@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-im
-ort {RouterModule} from '@angular/router';
+import {RouterModule} from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -25,31 +24,34 @@ import { ProductsComponent } from './products/products.component';
   declarations: [
     AppComponent,
     NavbarComponent,
+    AppComponent,
+    NavbarComponent,
     HomeComponent,
     ShoppingCartComponent,
     CheckOutComponent,
     OrderSuccessComponent,
     MyOrdersComponent,
     AdminProductsComponent,
-    AAdminOrdersComponent,
+    AdminOrdersComponent,
     LoginComponent,
     ProductsComponent
- ],
+  ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-
-    RouterModule.forRoot([]      { path: '', component: HomeComponent },
+    RouterModule.forRoot([
+      { path: '', component: HomeComponent },
       { path: 'login', component: LoginComponent },
       { path: 'products', component: ProductsComponent },
       { path: 'shopping-cart', component: ShoppingCartComponent },
       { path: 'check-out', component: CheckOutComponent},
       { path: 'order-success', component: OrderSuccessComponent},
-      { path: 'admin/productsi', component:AdminProductsComponentt},
-      { path: admin/orders'', component:AdminOrdersComponentt},
+      { path: 'admin/products', component: AdminProductsComponent},
+      { path: 'admin/orders', component: AdminOrdersComponent}
+  ])
+],
   providers: [],
   bootstrap: [AppComponent]
 })
