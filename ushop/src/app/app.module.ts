@@ -47,7 +47,10 @@ import { ProductsComponent } from './products/products.component';
       { path: 'products', component: ProductsComponent },
       { path: 'shopping-cart', component: ShoppingCartComponent },
       { path: 'check-out', component: CheckOutComponent},
-      { path: 'order-success', component: OrderSuccessComponent},  providers: [],
+      { path: 'order-success', component: OrderSuccessComponent},
+      { path: 'admin/productsi', component:AdminProductsComponentt},
+      { path: admin/orders'', component:AdminOrdersComponentt},
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
